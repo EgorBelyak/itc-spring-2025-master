@@ -1,35 +1,33 @@
-import React from 'react';
+import './App.css'
+import { Person } from './component/Person'
+import { useState } from 'react'
 
-export const Person = ({ firstName, lastName, onChangeFirstName, onChangeLastName, onSubmit }) => {
+export function App() {
+  const [ firstName, setFirstName ] = useState('');
+  const [ lastName, setLastName ] = useState('');
+
+  const handleSend = () => {
+  }
+
   return (
-    <div>
-      <div>
-        <label htmlFor="firstName">Имя:</label>
-        <input
-          type="text"
-          id="firstName"
-          value={firstName}
-          onChange={onChangeFirstName}
-        />
+    <>
+      <h1>Отправка данных</h1>
+      <div id="container">
+        <section id="left">
+          <Person
+            firstName={firstName}
+            lastName={lastName}
+            onChangeFirstName={(e) => setFirstName(e.target.value)}
+            onChangeLastName={(e) => setLastName(e.target.value)}
+            onSubmit={handleSend} />
+        </section>
+        <section id="right">
+          <Person
+            firstName={firstName}
+            lastName={lastName}
+            />
+        </section>
       </div>
-      <div>
-        <label htmlFor="lastName">Фамилия:</label>
-        <input
-          type="text"
-          id="lastName"
-          value={lastName}
-          onChange={onChangeLastName}
-        />
-      </div>
-      {onSubmit && (
-        <button onClick={onSubmit}>Отправить</button>
-      )}
-      <p>
-        Имя: {firstName}
-      </p>
-      <p>
-        Фамилия: {lastName}
-      </p>
-    </div>
-  );
-};
+    </>
+  )
+}
