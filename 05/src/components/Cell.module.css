@@ -1,0 +1,29 @@
+.cell {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.white {
+  background-color: #eceff4;
+}
+
+.black {
+  background-color: #3b4252;
+}
+
+.white.current {
+  background: #ff6b6b;
+}
+
+.black.current {
+  background: #d63031;
+}
+
+.white.possible-move {
+  background: #a5d8ff;
+}
+
+.black.possible-move {
+  background: #339af0;
+}
