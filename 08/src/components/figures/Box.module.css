@@ -1,0 +1,10 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
