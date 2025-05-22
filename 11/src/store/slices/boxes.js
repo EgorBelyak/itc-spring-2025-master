@@ -22,14 +22,22 @@ export const boxesSlice = createSlice({
         state.orange.row = row;
         state.orange.column = column;
       }
+    },
+    modifyValue: (state, action) => {
+      const { color, amount } = action.payload;
+      if (color === 'green') {
+        state.green.value += amount;
+      } else {
+        state.orange.value += amount;
+      }
     }
   },
   selectors: {
     getGreenBox: (state) => state.green,
     getOrangeBox: (state) => state.orange,
     canMove: (state) => {
-     
-      return true;
+      // Добавим проверку, что значение не отрицательное
+      return state.green.value > 0 && state.orange.value > 0;
     }
   }
 });
