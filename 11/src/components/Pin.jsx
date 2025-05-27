@@ -5,11 +5,11 @@ export const Pin = ({ color, value }) => {
   return (
     <div className={clsx(
       classes.pin,
-      {[classes.orange]: color === 'orange'},
-      {[classes.green]: color === 'green'},
+      { [classes.orange]: color === 'orange' },
+      { [classes.green]: color === 'green' },
     )}>
       <div className={classes.title}>
-        { value }
+        {value}
       </div>
     </div>
   )
