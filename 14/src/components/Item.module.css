@@ -1,0 +1,23 @@
+.item {
+  height: 40px;
+  min-width: 60px;
+  background: #000;
+
+  border-radius: 10px;
+  opacity: 0.8;
+}
+
+.item-1 {
+  width: 60px;
+  background-color: #8fbcbb;
+}
+
+.item-2 {
+  width: 90px;
+  background-color: #88c0d0;
+}
+
+.item-3 {
+  width: 120px;
+  background-color: #81a1c1;
+}
