@@ -1,0 +1,8 @@
+.board {
+  width: calc(var(--bone-size) * 4);
+  height: calc(var(--bone-size) * 4);
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
