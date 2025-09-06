@@ -1,0 +1,51 @@
+.empty, .dummy, .filled, .selected {
+  width: var(--cell-side);
+  height: var(--cell-side);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty {
+  background-color: #f0f0f0; /* Светлый фон для пустых клеток */
+  border-radius: 5px;
+}
+
+.empty:after {
+  content: '';
+  display: block;
+  width: var(--empty-side);
+  height: var(--empty-side);
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px dashed #a0a0a0; /* Пунктирная граница для пустых клеток */
+  box-sizing: border-box;
+}
+
+.empty:hover:after {
+  background-color: #e0e0e0; /* Легкая заливка при наведении */
+}
+
+.filled:after {
+  content: '';
+  display: block;
+  width: calc(var(--cell-side) * 0.8);
+  height: calc(var(--cell-side) * 0.8);
+  border-radius: 50%;
+  background-color: #3b4252; /* Цвет фишки */
+  position: relative;
+}
+
+.selected:after {
+  content: '';
+  display: block;
+  width: calc(var(--cell-side) * 0.8);
+  height: calc(var(--cell-side) * 0.8);
+  border-radius: 50%;
+  background-color: #5e81ac; /* Цвет выбранной фишки */
+  position: relative;
+}
+
+.dummy {
+  background-color: transparent; /* Невидимые клетки за пределами доски */
+}
